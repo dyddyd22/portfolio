@@ -1,0 +1,488 @@
+@charset "UTF-8";
+
+header {
+    position: relative;
+    width: 100%;
+    height:70px;
+    background-color: rgb(33,35,43);
+}
+
+header > div {
+    position: absolute;
+    left:50%;
+    top:10px;
+    width: 50px;
+    height:50px;
+    transform: translateX(-50%);
+}
+
+header > div img {
+    display: block;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header p {
+    position: absolute;
+    right:20px;
+    top:50%;
+    font-size: 20px;
+    color: #fff;
+    transform: translateY(-50%);
+}
+
+.info-area {
+    position: relative;
+    width: 100%;
+    height:500px;
+    background: url(../images/visual.png) no-repeat center / 100% auto;
+}
+
+.info-area .text-box {
+    position: absolute;
+    left: 50px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.info-area .text-box h2 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.info-area .text-box .name-tit {
+    padding-top:0;
+    color: #f7d241;
+}
+
+.info-area .text-box h2 span {
+    display: block;
+    padding-top: 10px;
+}
+
+.info-area .text-box p {
+    padding-top:30px;
+    font-size: 16px;
+    color: #fff;
+    line-height:1.4;
+}
+
+.project-tit {
+  padding:60px 0 30px; 
+  font-size: 40px;
+  text-align: center;
+}
+
+main {
+    display: block;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    min-height:30vh;
+}
+
+.swiper .swiper-slide a {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.swiper .swiper-slide a img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+  }
+
+  .swiper .swiper-slide a .project-info {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #ffaf83 !important;
+  }
+
+  /* .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background-color: #ffaf83 !important;
+    } */
+
+  .project-info .skill-info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transform: translate(-50%,-50%);
+  }
+
+  .project-info .skill-info span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 27px;
+    text-shadow: 3px 3px 5px rgba(255,255,255,0.6);
+  }
+
+  .project-info .skill-info div {
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .swiper .swiper-slide a:hover .project-info {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .profile-wrap {
+    margin-top:60px;
+    padding-top:60px;
+    border-top: 1px solid #e9e9e9;
+  }
+
+  .profile-wrap .box-area{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+  }
+
+  .profile-wrap h2 {
+    display: block;
+    margin-bottom:30px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .profile-wrap h2 i {
+    font-size: 25px;
+    vertical-align: 4px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile .box-txt,
+  .profile .graph-box {
+    padding: 0 10px;
+    width: 50%;
+  }
+
+  .profile-list {
+    border-right: 1px solid #e9e9e9;
+  }
+
+  .profile-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom:10px;
+  }
+
+  .profile-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .profile-item span {
+    display: block;
+    width:40%;
+    font-size: 20px;
+  }
+
+  .profile-item div {
+    width:65%;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .graph-box .graph {
+    display: flex;
+    align-items: center;
+    margin-bottom:10px;
+  }
+
+  .graph-box .graph:last-child {
+    margin-bottom: 0;
+  }
+
+  .graph .graph-name {
+    width: 35%;
+    font-size: 20px;
+  }
+
+  .graph .chart-number {
+    display: block;
+    width: 65%;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+  }
+
+  .chart-number span {
+    display: block;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    background-color: #00E898;
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: #fff;
+  }
+
+  .chart-number.stack span {
+    animation: stack 2s 1;
+  }
+
+  .chart-number.stack2 span {
+    animation: stack2 2s 1;
+  }
+
+  .chart-number.stack3 span {
+    animation: stack3 2s 1;
+  }
+
+  .chart-number.stack4 span {
+    animation: stack4 2s 1;
+  }
+
+
+  @keyframes stack {
+    0% {
+        width:0;
+        color: rgba(255,255,255,0);
+    }
+
+    40% {
+        color: rgba(255,255,255,1);
+    }
+
+    100% {
+        width:84%;
+    }
+  }
+
+  @keyframes stack2 {
+    0% {
+        width:0;
+        color: rgba(255,255,255,0);
+    }
+
+    40% {
+        color: rgba(255,255,255,1);
+    }
+
+    100% {
+        width:84%;
+    }
+  }
+
+  @keyframes stack3 {
+    0% {
+        width:0;
+        color: rgba(255,255,255,0);
+    }
+
+    40% {
+        color: rgba(255,255,255,1);
+    }
+
+    100% {
+        width:78%;
+    }
+  }
+
+  @keyframes stack4 {
+    0% {
+        width:0;
+        color: rgba(255,255,255,0);
+    }
+
+    40% {
+        color: rgba(255,255,255,1);
+    }
+
+    100% {
+        width:40%;
+    }
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 60px;
+    padding:30px 10px 0 10px;
+    background-color: #ccc;
+  }
+
+  footer .address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+  }
+
+  footer .address p {
+    font-size: 18px;
+    color: #fff;
+    line-height:1.3
+  }
+
+  footer .address div { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .address div span,
+  footer .address div a {
+    padding-left: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1;
+  }
+
+  footer .address div a {
+    display: block;
+    transform: translate3d(0,-1px,0)
+  }
+
+  footer .copyright {
+    padding: 40px 0;
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    color:#fff;
+    text-align: center;
+  }
+
+  @media all and (max-width:765px) {
+    header p {
+      font-size: 17px;
+    }
+
+    .info-area {
+      height:350px;
+    }
+
+    .info-area .text-box {
+      left: 0;
+      padding:0 20px;
+      word-break:keep-all;
+    }
+
+    .info-area .text-box h2 {
+      font-size: 30px;
+    }
+
+    .info-area .text-box p {
+      font-size: 14px;
+    }
+
+    .project-tit,
+    .profile-wrap h2 {
+      font-size: 27px;
+    }
+
+    .project-tit {
+      padding-top:30px;
+    }
+
+    .swiper {
+      min-height: 33vh;
+    }
+
+    .swiper .swiper-slide a {
+      height:200px;
+    }
+
+    .project-info .skill-info span {
+      font-size: 20px;
+    }
+    
+    .project-info .skill-info,
+    .project-info .skill-info div {
+      font-size: 16px;
+    }
+
+    .profile-wrap {
+      margin-top:30px;
+      padding-top:40px;
+    }
+
+    .profile {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+
+    .profile .box-txt, .profile .graph-box {
+      width: 100%;
+    }
+
+    .profile-list {
+      margin-bottom: 50px;
+      border: 0;
+    }
+
+    .profile-item span {
+      width: 55%;
+      font-size: 15px;
+    }
+
+    .profile-item div {
+      font-size: 17px;
+    }
+
+    .graph .chart-number {
+      height:20px;
+    }
+
+    .chart-number span {
+      height:20px;
+      line-height:20px;
+    }
+
+    .graph .graph-name {
+      font-size: 15px;
+    }
+
+    footer {
+      margin-top:40px;
+    }
+
+    footer .address {
+      flex-direction: column;
+    }
+
+    footer .address p {
+      margin-bottom: 40px;
+      padding: 0 20px;
+      font-size: 16px;
+      font-weight: bold;
+      word-break: keep-all;
+    }
+
+    footer .address div span, footer .address div a {
+      font-size: 18px;
+    }
+  }
